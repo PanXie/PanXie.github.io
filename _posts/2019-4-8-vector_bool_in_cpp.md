@@ -46,7 +46,7 @@ public:
 
   reference operator[](size_type __n) { return *(begin() + __n); }  
 
-}；  
+};  
 
 ```  
 
@@ -163,4 +163,4 @@ public:
 
 ### 3，如何使用vector&lt;bool&gt;
 
-避免使用vector&lt;bool&gt;，参考[Item 18. Avoid using vectorr&lt;bool&gt;](http://www.uml.org.cn/c++/pdf/EffectiveSTL.pdf), 使用deque&lt;bool&gt; 或 bitset代替
+避免使用vector&lt;bool&gt; :smile: :smile: ，参考[Item 18. Avoid using vector&lt;bool&gt;](http://www.uml.org.cn/c++/pdf/EffectiveSTL.pdf), 使用deque&lt;bool&gt; 或 bitset代替
