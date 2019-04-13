@@ -41,6 +41,7 @@ class vector : protected _Vector_base<_Tp, _Alloc>
 {  
 public:  
   // vector 的嵌套类型定义  
+  
   typedef _Tp value_type;  
   typedef value_type& reference;  
 
@@ -59,6 +60,7 @@ int foo()
 {  
     std::vector<int> vInt{1, 2};  
     auto& x=vInt[1];  // it is auto&  NOT auto
+    
     x = 10;  
     return vInt[1];  
 }  
@@ -158,7 +160,7 @@ public:
 
 使用operator[]对于普通容器来说，返回的是对应元素的引用；但是对于vector&lt;bool&gt;来说，返回的是_Bit_reference这个内部代理类的临时变量--右值，而不是真正的reference。更详细的说明可以看[这里](https://www.boost.org/sgi/stl/bit_vector.html)  
 
-回到一开始的题目， *auto& x = v[1];* v[1]返回一个右值，无法对一个右值取引用，所以编译报错：*error: invalid initialization of non-const reference of type ‘std::_Bit_reference&’ from an rvalue of type ‘std::vector<bool>::reference {aka std::_Bit_reference}’ *
+回到一开始的题目， *auto& x = v[1];* v[1]返回一个右值，无法对一个右值取引用，所以编译报错：`error: invalid initialization of non-const reference of type ‘std::_Bit_reference&’ from an rvalue of type ‘std::vector<bool>::reference {aka std::_Bit_reference}’ `
 去掉&，才可以正常编译，并且修改v[1]的值。
 
 ### 3，如何使用vector&lt;bool&gt;
