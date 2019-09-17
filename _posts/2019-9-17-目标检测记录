@@ -1,0 +1,36 @@
+---
+layout:     post
+title:      目标检测记录
+subtitle:   
+date:       2019-9-17
+author:     XP
+header-img: img/problems.jpg
+catalog: true
+tags:
+    - 深度学习
+    - 目标检测
+    - R-CNN
+---
+
+## 目标检测记录 ##
+----
+
+### 参考文档
+1. [超级详细的论文整理：Object Detection](https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html)
+2. [综述：深度学习时代的目标检测算法](https://zhuanlan.zhihu.com/p/33277354)
+3. [R-CNN论文详解](https://blog.csdn.net/WoPawn/article/details/52133338)
+4. [目标检测入门](https://zhuanlan.zhihu.com/p/34179420)
+5. [Selective Search for Object Recoginition](https://blog.csdn.net/surgewong/article/details/39316931)
+6. [RCNN- 将CNN引入目标检测的开山之作](https://zhuanlan.zhihu.com/p/23006190)
+7. [基于深度学习的图像目标检测](https://zhuanlan.zhihu.com/p/32564990)
+
+
+### 目标检测算法脉络图
+
+![object_detection](https://raw.githubusercontent.com/PanXie/PanXie.github.io/master/img/ObjectDetection.jpg)
+<center> 图片来自https://zhuanlan.zhihu.com/p/33277354 </center>
+
+### R-CNN思维导图
+![R-CNN-demo](https://raw.githubusercontent.com/PanXie/PanXie.github.io/master/img/R-CNN-demo.png)
+
+![R-CNN](https://raw.githubusercontent.com/PanXie/PanXie.github.io/master/img/R-CNN.png)
