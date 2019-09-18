@@ -114,6 +114,33 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
 
+<script>
+    // 给图片添加链接
+    $(document).ready(function() {
+        $("p img").each(function() {
+            var strA = "<a id='yourid' href='" + this.src + "'></a>";
+            $(this).wrapAll(strA);
+        });
+    });
+
+    // fancybox
+    $("#yourid").fancybox({
+        helpers : {
+            overlay : {
+                css : {
+                    'background' : 'rgba(58, 42, 45, 0.95)'
+                }
+            }
+        },
+
+    afterShow :  function(){
+        $(':button').click(function(){
+            parent.$.fancybox.close();
+        })
+    }
+    });
+</script>
+
 <!-- Service Worker -->
 {% if site.service-worker %}
 <script type="text/javascript">
