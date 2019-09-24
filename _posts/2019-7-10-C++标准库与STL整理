@@ -25,3 +25,10 @@ tags:
 
 ### 3，算法演示
 ![STL-A](https://raw.githubusercontent.com/PanXie/PanXie.github.io/master/img/cpp_std_algorithms.png)
+
+### 4, 参考文档
+[cpp_reference](https://en.cppreference.com/w/cpp/algorithm)
+
+[A quick tutorial of standard library in the C++11 era](https://www.alibabacloud.com/forum/read-531)
+
+[上面的翻译版本](https://yq.aliyun.com/articles/61578)
