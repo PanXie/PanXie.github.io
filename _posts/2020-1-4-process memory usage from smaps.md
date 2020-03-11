@@ -63,3 +63,15 @@ awk '/Rss:/{ sum += $2 } END { print sum }' /proc/$$/smaps
 ### 2, About VSS，RSS，PSS，USS ###
 
 ![VSS/RSS/PSS/USS](../img/VSS_PSS_RSS_USS.png)
+
+
+### 3, others ###
+1. [Why read-only memory mapped regions have dirty pages?](https://unix.stackexchange.com/questions/402169/why-read-only-memory-mapped-regions-have-dirty-pages/402173)
+
+    `A dirty page does not necessarily require a write-back.` A dirty page is one that was written to since the kernel last marked it as clean. The data doesn't always need to be saved back into the original file.
+
+    The pages are private, not shared, so they wouldn't be saved back into the original file. It would be impossible to have a dirty page backed by a read-only file. If the page needs to be removed from RAM, it will be saved in swap.
+
+    Pages that are read-only, private and dirty, but within the range of a memory-mapped file, are typically data pages that contain constants that need to be initialized at run time, but don't change after they have been initialized. For example, they may contain static data that embeds pointers; the pointer values depend on the address at which the program or library is mapped, so it has to be computed after the program has started, with the page being read-write at this stage. After the pointers have been computed, the contents of the page won't ever change in this instance of the program, so the page can be changed to read-only. See [“Hunting Down Dirty Memory Pages” by stosb](https://stosb.com/blog/hunting-down-dirty-memory-pages/) for an example with code fragments.
+
+    You may, more rarely, see read-only, executable, private, dirty pages; these happen with some linkers that mix code and data more freely, or with just-in-time compilation.
