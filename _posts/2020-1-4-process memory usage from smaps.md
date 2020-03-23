@@ -16,7 +16,6 @@ tags:
 ---
 
 ## A process' memory usage from /proc/pid/smaps ##
-----
 
 来源：https://unix.stackexchange.com/questions/33381/getting-information-about-a-process-memory-usage-from-proc-pid-smaps
 
