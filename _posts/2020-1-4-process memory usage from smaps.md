@@ -2,7 +2,7 @@
 layout:     post
 title:      A process' memory usage from /proc/pid/smaps
 subtitle:   
-date:       2020-4
+date:       2020-1-4
 author:     XP
 header-img: img/problems.jpg
 catalog: true
